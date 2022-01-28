@@ -1,0 +1,15 @@
+[Unit]
+Description=secure_metrics
+After=network.target
+
+[Service]
+Type=simple
+# WorkingDirectory=/code/python/myapp
+ExecStart=/home/youruser/scripts/security_check/secure_metrics.sh
+User=youruser
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+# WantedBy=default.target
